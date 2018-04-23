@@ -1,0 +1,16 @@
+{
+  "name": "tableparser",
+  "version": "0.1.0",
+  "productName": "TableParser",
+  "description": "excel to json.",
+  "main": "dist/main.js",
+  "author": {
+    "name": "liufeng420",
+    "email": "liufeng420@qq.com"
+  },
+  "dependencies": {
+    "electron-config": "^0.2.1",
+    "electron-is": "^2.3.0",
+    "electron-log": "^1.2.2"
+  }
+}
