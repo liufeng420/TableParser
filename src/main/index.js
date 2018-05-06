@@ -6,8 +6,29 @@ import * as application from './services/application';
 import * as window from './services/window';
 import * as menu from './services/menu';
 import * as config from './configs/config';
+import * as excel2json from './services/excel2json';
+import * as json2table from './services/json2table';
 
 log.transports.file.level = 'info';
+// // Same as for console transport
+// log.transports.file.level = 'warn';
+// log.transports.file.format = '{h}:{i}:{s}:{ms} {text}';
+
+// // Set approximate maximum log size in bytes. When it exceeds,
+// // the archived log will be saved as the log.old.log file
+// log.transports.file.maxSize = 5 * 1024 * 1024;
+
+// // Write to this file, must be set before first logging
+// log.transports.file.file = join(__dirname, '/log.txt');
+
+// // fs.createWriteStream options, must be set before first logging
+// // you can find more information at
+// // https://nodejs.org/api/fs.html#fs_fs_createwritestream_path_options
+// log.transports.file.streamConfig = { flags: 'w+' };
+
+// // set existed file stream
+// log.transports.file.stream = fs.createWriteStream('log.txt');
+// log.transports.file.appName = 'test';
 
 log.info('(main/index) >>>>>>>>>>>>>>>>>>');
 log.info('(main/index) app start');
@@ -54,6 +75,8 @@ app.on('quit', () => {
 global.services = {
   application,
   window,
+  excel2json,
+  json2table,
 };
 global.configs = {
   config,
